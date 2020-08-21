@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <include name="default.xml" />
+ 
+  <remote fetch="ssh://git@bitbucket.sw.nxp.com/gvip" name="gvip-bitbucket"/>
+
+  <remove-project name="gvip/meta-gvip"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="526ef46e38349f37c96a92f7f5f2a8a0cb693c8b"/>
+
+  </manifest>

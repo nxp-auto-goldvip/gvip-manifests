@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <include name="alb.xml" />
+
+  <remote fetch="https://github.com/aws" name="aws"/>
+
+  <project name="meta-java" path="sources/meta-java" remote="yocto" revision="95d56a63cdbf1ed9db99a1f02075568fd45a668b" upstream="zeus"/>
+  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="449d0f78948d1d326d31ddde37253b953ed53f4a" upstream="zeus"/>
+  <project name="gvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="526ef46e38349f37c96a92f7f5f2a8a0cb693c8b" upstream="master"/>
+
+  </manifest>
