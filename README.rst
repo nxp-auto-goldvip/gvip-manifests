@@ -66,6 +66,7 @@ Setup the build environment
 - Install all prerequisites before starting the Yocto build (first time only)::
    
    ./sources/meta-alb/scripts/host-prepare.sh
+   sudo apt-get install libssl-dev
 
 - Create a build directory and setup build environment::
 
