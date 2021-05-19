@@ -1,14 +1,14 @@
-======================
-GVIP Project Manifests
-======================
+=========================
+GoldVIP Project Manifests
+=========================
 
-GVIP project manifest files are used together with GVIP Yocto meta layer to
-build the NXP Gateway Vehicle Integration Platform (GVIP).
+GoldVIP project manifest files are used together with GoldVIP Yocto meta layer to
+build the NXP Gateway Vehicle Integration Platform (GoldVIP).
 
 First Time Setup
 ================
 
-To get and build GVIP you need to have `repo` installed and its dependencies.
+To get and build GoldVIP you need to have `repo` installed and its dependencies.
 This only needs to be done once.
 
 - Update the package manager (sudo apt update)
@@ -27,10 +27,10 @@ This only needs to be done once.
    chmod a+x ~/bin/repo
    PATH=${PATH}:~/bin
 
-Building GVIP
-=============
+Building GoldVIP
+================
 
-The following steps will build a GVIP image based on NXP Auto Linux BSP image.
+The following steps will build a GoldVIP image based on NXP Auto Linux BSP image.
 
 Note:
 A Yocto build needs at least 50GB of free space and takes a lot of time (a few 
@@ -41,14 +41,14 @@ The recommended RAM size is 8 GB.
 Download the Yocto project environment
 --------------------------------------
 
-Get the latest GVIP manifest files and bring other required repositories::
+Get the latest GoldVIP manifest files and bring other required repositories::
 
-  mkdir nxp-yocto-gvip
-  cd nxp-yocto-gvip
+  mkdir nxp-yocto-goldvip
+  cd nxp-yocto-goldvip
   repo init -u https://source.codeaurora.org/external/autobsps32/gvip/gvip-manifests
   repo sync
 
-Note: for a specific GVIP release or engineering build, please use the proper
+Note: for a specific GoldVIP release or engineering build, please use the proper
 branch (-b <branch>) and manifest file (-m <manifest>).
 
 Note: to fetch internal development repositories use Bitbucket URL:
@@ -56,9 +56,9 @@ Note: to fetch internal development repositories use Bitbucket URL:
 
 Manifest files description:
 
- - default.xml -> fetch GVIP repositories from https://source.codeaurora.org
+ - default.xml -> fetch GoldVIP repositories from https://source.codeaurora.org
  - default-bitbucket.xml -> fetch internal development repositories from Bitbucket
- - alb.xml -> default NXP Auto Linux BSP without GVIP extensions
+ - alb.xml -> default NXP Auto Linux BSP without GoldVIP extensions
 
 Setup the build environment
 ---------------------------
@@ -80,24 +80,24 @@ Setup the build environment
    DISTRO_FEATURES_append = " pfe"
    NXP_FIRMWARE_LOCAL_DIR = "<path to the local s32g_pfe_class.fw file>"
 
-- Download GVIP CAN Gateway binary and append the following lines to file
+- Download GoldVIP CAN Gateway binary and append the following lines to file
   build_<machine>/conf/local.conf::
   
-   DISTRO_FEATURES_append = " gvip-can-gw"
-   GVIP_CAN_GW_DIR = "<path to the local can-gw.bin file>"
+   DISTRO_FEATURES_append = " goldvip-can-gw"
+   GOLDVIP_CAN_GW_DIR = "<path to the local can-gw.bin file>"
 
 Note: The features added above with DISTRO_FEATURES_append are optional and the
-GVIP image can be built without those functionalities.
+GoldVIP image can be built without those functionalities.
 
-Note: To use internal development gvip repository add the following line in
+Note: To use internal development GoldVIP repository add the following line in
 build_<machine>/conf/local.conf::
 
-  GVIP_URL = "git://bitbucket.sw.nxp.com/gvip/gvip.git;protocol=ssh"
+  GOLDVIP_URL = "git://bitbucket.sw.nxp.com/gvip/gvip.git;protocol=ssh"
 
 Build the image
 ---------------
 
-  bitbake fsl-image-gvip
+  bitbake fsl-image-goldvip
   
 Running the above command would be enough to completely build u-boot, kernel,
 modules and a rootfs ready to be deployed. Look for a build result in
@@ -110,7 +110,7 @@ The file `<image-name>.sdcard` is a disk image with all necessary partitions and
 contains the bootloader, kernel and rootfs. You can just low-level copy the data
 on this file to the SD card device using dd as on the following command example::
 
-  sudo dd if=fsl-image-gvip-s32g274ardb2.sdcard of=/dev/<sd-device> bs=1M conv=fsync,notrunc status=progress && sync
+  sudo dd if=fsl-image-goldvip-s32g274ardb2.sdcard of=/dev/<sd-device> bs=1M conv=fsync,notrunc status=progress && sync
 
 Ensure that any partitions on the card are properly unmounted before writing
 the card image, or you may have a corrupted card image in the end.
