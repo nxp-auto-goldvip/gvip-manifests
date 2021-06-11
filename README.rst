@@ -75,16 +75,27 @@ Setup the build environment
   Currently, the only supported <machine> (NXP board) is: s32g274ardb2.
 
 - Download PFE firmware from your nxp.com account and append the following lines 
-  to file build_<machine>/conf/local.conf::
+  to the file build_<machine>/conf/local.conf::
 
    DISTRO_FEATURES_append = " pfe"
    NXP_FIRMWARE_LOCAL_DIR = "<path to the local s32g_pfe_class.fw file>"
 
-- Download GoldVIP CAN Gateway binary and append the following lines to file
+- Download GoldVIP CAN Gateway binary and append the following lines to the file
   build_<machine>/conf/local.conf::
   
    DISTRO_FEATURES_append = " goldvip-can-gw"
    GOLDVIP_CAN_GW_DIR = "<path to the local can-gw.bin file>"
+
+- Download GoldVIP Bootloader binary and append the following lines to the file
+  build_<machine>/conf/local.conf::
+  
+   DISTRO_FEATURES_append = " goldvip-bootloader"
+   GOLDVIP_BOOTLOADER_DIR = "<path to the local boot-loader file>"
+
+- Add XEN hypervisor and bridging utilities to your yocto build by appending the following line to the file 
+ build_<machine>/conf/local.conf::
+
+   DISTRO_FEATURES_append = " xen bridge-utils"
 
 Note: The features added above with DISTRO_FEATURES_append are optional and the
 GoldVIP image can be built without those functionalities.
