@@ -1,9 +1,9 @@
-=========================
-GoldVIP Project Manifests
-=========================
+======================================
+OpenEmbedded/Yocto project for GoldVIP
+======================================
 
 GoldVIP project manifest files are used together with GoldVIP Yocto meta layer to
-build the NXP Gateway Vehicle Integration Platform (GoldVIP).
+build the NXP Gold Vehicle Integration Platform (GoldVIP).
 
 First Time Setup
 ================
@@ -74,25 +74,28 @@ Setup the build environment
 
   Currently, the only supported <machine> (NXP board) is: s32g274ardb2.
 
-- Download PFE firmware from your nxp.com account and append the following lines 
+- Download GoldVIP binaries from your nxp.com account and append the following
+  line to the file build_<machine>/conf/local.conf::
+
+   GOLDVIP_BINARIES_DIR = "<path to the local GoldVIP binaries directory>"
+
+- Download PFE firmware from your nxp.com account and append the following lines
   to the file build_<machine>/conf/local.conf::
 
    DISTRO_FEATURES_append = " pfe"
    NXP_FIRMWARE_LOCAL_DIR = "<path to the local s32g_pfe_class.fw file>"
 
-- Download GoldVIP CAN Gateway binary and append the following lines to the file
-  build_<machine>/conf/local.conf::
-  
+- Add GoldVIP CAN Gateway binary to your yocto build by appending the following
+  line to the build_<machine>/conf/local.conf::
+
    DISTRO_FEATURES_append = " goldvip-can-gw"
-   GOLDVIP_CAN_GW_DIR = "<path to the local can-gw.bin file>"
 
-- Download GoldVIP Bootloader binary and append the following lines to the file
-  build_<machine>/conf/local.conf::
-  
+- Add GoldVIP Bootloader binary to your yocto build by appending the following
+  line to the build_<machine>/conf/local.conf::
+
    DISTRO_FEATURES_append = " goldvip-bootloader"
-   GOLDVIP_BOOTLOADER_DIR = "<path to the local boot-loader file>"
 
-- Add XEN hypervisor and bridging utilities to your yocto build by appending the following line to the file 
+- Add XEN hypervisor and bridging utilities to your yocto build by appending the following line to the file
  build_<machine>/conf/local.conf::
 
    DISTRO_FEATURES_append = " xen bridge-utils"
