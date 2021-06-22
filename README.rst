@@ -16,9 +16,9 @@ This only needs to be done once.
 - Install `repo` tool dependencies:
 
    - Ubuntu 18.04 LTS or later
-   - python 2.x - 2.6 or newer ($: sudo apt install python)
-   - git 1.8.3 or newer ($: sudo apt install git)
-   - curl ($: sudo apt install curl)
+   - python 2.x - 2.6 or newer (``$ sudo apt-get install python``)
+   - git 1.8.3 or newer (``$ sudo apt-get install git``)
+   - curl (``$ sudo apt-get install curl``)
 
 - Install `repo` tool::
 
@@ -45,13 +45,14 @@ Get the latest GoldVIP manifest files and bring other required repositories::
 
   mkdir nxp-yocto-goldvip
   cd nxp-yocto-goldvip
-  repo init -u https://source.codeaurora.org/external/autobsps32/gvip/gvip-manifests
+  repo init -u https://source.codeaurora.org/external/autobsps32/goldvip/gvip-manifests
   repo sync
 
 Note: for a specific GoldVIP release or engineering build, please use the proper
-branch (-b <branch>) and manifest file (-m <manifest>).
+branch (`-b <branch>`) and manifest file (`-m <manifest>`).
 
-Note: to fetch internal development repositories use Bitbucket URL:
+Note: to fetch internal development repositories use Bitbucket URL::
+
   repo init -u ssh://git@bitbucket.sw.nxp.com/gvip/gvip-manifests.git -b develop -m default-bitbucket.xml
 
 Manifest files description:
@@ -64,7 +65,7 @@ Setup the build environment
 ---------------------------
 
 - Install all prerequisites before starting the Yocto build (first time only)::
-   
+
    ./sources/meta-alb/scripts/host-prepare.sh
    sudo apt-get install libssl-dev
 
@@ -72,47 +73,49 @@ Setup the build environment
 
    source nxp-setup-alb.sh -m <machine> -e "meta-aws meta-java"
 
-  Currently, the only supported <machine> (NXP board) is: s32g274ardb2.
+  Currently, the only supported `<machine>` (NXP board) is: `s32g274ardb2`.
 
 - Download GoldVIP binaries from your nxp.com account and append the following
-  line to the file build_<machine>/conf/local.conf::
+  line to the file `build_<machine>/conf/local.conf`::
 
    GOLDVIP_BINARIES_DIR = "<path to the local GoldVIP binaries directory>"
 
 - Download PFE firmware from your nxp.com account and append the following lines
-  to the file build_<machine>/conf/local.conf::
+  to the file `build_<machine>/conf/local.conf`::
 
    DISTRO_FEATURES_append = " pfe"
    NXP_FIRMWARE_LOCAL_DIR = "<path to the local s32g_pfe_class.fw file>"
 
 - Add GoldVIP CAN Gateway binary to your yocto build by appending the following
-  line to the build_<machine>/conf/local.conf::
+  line to the `build_<machine>/conf/local.conf`::
 
    DISTRO_FEATURES_append = " goldvip-can-gw"
 
 - Add GoldVIP Bootloader binary to your yocto build by appending the following
-  line to the build_<machine>/conf/local.conf::
+  line to the `build_<machine>/conf/local.conf`::
 
    DISTRO_FEATURES_append = " goldvip-bootloader"
 
-- Add XEN hypervisor and bridging utilities to your yocto build by appending the following line to the file
- build_<machine>/conf/local.conf::
+- Add XEN hypervisor and bridging utilities to your yocto build by appending the
+  following line to the file `build_<machine>/conf/local.conf`::
 
    DISTRO_FEATURES_append = " xen bridge-utils"
 
-Note: The features added above with DISTRO_FEATURES_append are optional and the
+Note: The features added above with `DISTRO_FEATURES_append` are optional and the
 GoldVIP image can be built without those functionalities.
 
 Note: To use internal development GoldVIP repository add the following line in
-build_<machine>/conf/local.conf::
+`build_<machine>/conf/local.conf`::
 
   GOLDVIP_URL = "git://bitbucket.sw.nxp.com/gvip/gvip.git;protocol=ssh"
 
 Build the image
 ---------------
 
+::
+
   bitbake fsl-image-goldvip
-  
+
 Running the above command would be enough to completely build u-boot, kernel,
 modules and a rootfs ready to be deployed. Look for a build result in
 `build_<machine>/tmp/deploy/images/`.
@@ -135,7 +138,7 @@ Notes:
  - Builds with bitbake accumulate in the deployment directory. You may want to
    delete older irrelevant images after repeated builds.
 
- - The very first build ever will take very long because a lot of one-time house 
+ - The first build will take a very long time because a lot of one-time house
    keeping and building has to happen. You want to have a powerful build machine.
 
  - SOURCE_THIS file has to be sourced when going back to build with a new shell.
