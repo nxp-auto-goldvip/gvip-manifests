@@ -45,7 +45,7 @@ Get the latest GoldVIP manifest files and bring other required repositories::
 
   mkdir nxp-yocto-goldvip
   cd nxp-yocto-goldvip
-  repo init -u https://source.codeaurora.org/external/autobsps32/goldvip/gvip-manifests
+  repo init -u https://source.codeaurora.org/external/autobsps32/goldvip/gvip-manifests -b develop -m default.xml
   repo sync
 
 Note: for a specific GoldVIP release or engineering build, please use the proper
