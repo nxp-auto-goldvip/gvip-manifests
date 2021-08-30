@@ -71,7 +71,7 @@ Setup the build environment
 
 - Create a build directory and setup build environment::
 
-   source nxp-setup-alb.sh -m <machine> -e "meta-aws meta-java"
+   source nxp-setup-alb.sh -m <machine> -e "meta-aws meta-java meta-security"
 
   Currently, the only supported `<machine>` (NXP board) is: `s32g274ardb2`.
 
@@ -100,6 +100,12 @@ Setup the build environment
   following line to the file `build_<machine>/conf/local.conf`::
 
    DISTRO_FEATURES_append = " xen bridge-utils"
+
+- Add the SJA1110 binaries to your yocto build by appending the
+  following lines to the file `build_<machine>/conf/local.conf`::
+
+   SJA1110_UC_FW = "<path to the local GoldVIP binaries directory>/sja1110_uc.bin"
+   SJA1110_SWITCH_FW = "<path to the local GoldVIP binaries directory>/sja1110_switch.bin"
 
 Note: The features added above with `DISTRO_FEATURES_append` are optional and the
 GoldVIP image can be built without those functionalities.
