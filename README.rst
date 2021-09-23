@@ -78,9 +78,9 @@ Setup the build environment
   PFE firmware, XEN hypervisor and bridging utilities are mandatory and
   configured by the fsl-goldvip distro.
 
-  GoldVIP CAN Gateway, GoldVIP Bootloader binaries and SJA1110 firmware are
-  also configured by the fsl-goldvip distro, but they are optional and can be
-  removed from the image.
+  fsl-goldvip distro includes optional features such as GoldVIP CAN Gateway,
+  GoldVIP Real-time Bootloader, GoldVIP OTA applications, and SJA1110 firmware.
+  Any of these features can be removed from the image.
 
 - Download GoldVIP binaries from your nxp.com account and append the following
   line to the file `build_<machine>/conf/local.conf`::
@@ -92,11 +92,12 @@ Setup the build environment
 
    NXP_FIRMWARE_LOCAL_DIR = "<path to the local s32g_pfe_class.fw file>"
 
-Note: To remove GoldVIP CAN Gateway and GoldVIP Bootloader binaries,
-append the following lines to the file `build_<machine>/conf/local.conf`::
+Note: To remove GoldVIP CAN Gateway, GoldVIP Real-time Bootloader, and GoldVIP OTA
+applications, append the following lines to the file `build_<machine>/conf/local.conf`::
 
    DISTRO_FEATURES_remove = "goldvip-can-gw"
    DISTRO_FEATURES_remove = "goldvip-bootloader"
+   DISTRO_FEATURES_remove = "goldvip-ota"
 
 Note: To remove SJA1110 firmware, append the following lines to
 the file `build_<machine>/conf/local.conf`::
