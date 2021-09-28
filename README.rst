@@ -107,8 +107,8 @@ Setup the build environment
    SJA1110_UC_FW = "<path to the local GoldVIP binaries directory>/sja1110_uc.bin"
    SJA1110_SWITCH_FW = "<path to the local GoldVIP binaries directory>/sja1110_switch.bin"
 
-Note: The features added above with `DISTRO_FEATURES_append` are optional and the
-GoldVIP image can be built without those functionalities.
+Note: From the features added above with `DISTRO_FEATURES_append` XEN and PFE are mandatory,
+the rest are optional and the GoldVIP image can be built without those functionalities.
 
 Note: To use internal development GoldVIP repository add the following line in
 `build_<machine>/conf/local.conf`::
