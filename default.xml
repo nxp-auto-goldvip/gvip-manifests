@@ -5,6 +5,6 @@
   <remote fetch="https://github.com/aws" name="aws"/>
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="6e84638d77ac921aac46649095bca5ddbde94d2a" upstream="gatesgarth"/>
-  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="a463868c4c8ded376220f8e6ff7166e30f672914" upstream="gatesgarth"/>
-  <project name="goldvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="944fe1f68b417785d3fb490c274321ea5f252234" upstream="develop"/>
+  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="938ce3d5ee305e7f35672b6dedeaf818cbd9e7bf" upstream="gatesgarth"/>
+  <project name="goldvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="f69c4c7ebae5ba8a672be3c40280d285a448cd7a" upstream="develop"/>
   </manifest>
