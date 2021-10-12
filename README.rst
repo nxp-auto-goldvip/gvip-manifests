@@ -71,45 +71,38 @@ Setup the build environment
 
 - Create a build directory and setup build environment::
 
-   source nxp-setup-alb.sh -m <machine> -e "meta-aws meta-java"
+   source nxp-setup-alb.sh -D fsl-goldvip -m <machine> -e "meta-aws meta-java"
 
   Currently, the only supported `<machine>` (NXP board) is: `s32g274ardb2`.
+
+  PFE firmware, XEN hypervisor and bridging utilities are mandatory and
+  configured by the fsl-goldvip distro.
+
+  GoldVIP CAN Gateway, GoldVIP Bootloader binaries and SJA1110 firmware are
+  also configured by the fsl-goldvip distro, but they are optional and can be
+  removed from the image.
 
 - Download GoldVIP binaries from your nxp.com account and append the following
   line to the file `build_<machine>/conf/local.conf`::
 
    GOLDVIP_BINARIES_DIR = "<path to the local GoldVIP binaries directory>"
 
-- Download PFE firmware from your nxp.com account and append the following lines
+- Download PFE firmware from your nxp.com account and append the following line
   to the file `build_<machine>/conf/local.conf`::
 
-   DISTRO_FEATURES_append = " pfe"
    NXP_FIRMWARE_LOCAL_DIR = "<path to the local s32g_pfe_class.fw file>"
 
-- Add GoldVIP CAN Gateway binary to your yocto build by appending the following
-  line to the `build_<machine>/conf/local.conf`::
+Note: To remove GoldVIP CAN Gateway and GoldVIP Bootloader binaries,
+append the following lines to the file `build_<machine>/conf/local.conf`::
 
-   DISTRO_FEATURES_append = " goldvip-can-gw"
+   DISTRO_FEATURES_remove = "goldvip-can-gw"
+   DISTRO_FEATURES_remove = "goldvip-bootloader"
 
-- Add GoldVIP Bootloader binary to your yocto build by appending the following
-  line to the `build_<machine>/conf/local.conf`::
+Note: To remove SJA1110 firmware, append the following lines to
+the file `build_<machine>/conf/local.conf`::
 
-   DISTRO_FEATURES_append = " goldvip-bootloader"
-
-- Add XEN hypervisor and bridging utilities to your yocto build by appending the
-  following lines to the file `build_<machine>/conf/local.conf`::
-
-   DISTRO_FEATURES_append = " xen bridge-utils"
-   XEN_EXAMPLE = "xen-examples-goldvip"
-
-- Add the SJA1110 binaries to your yocto build by appending the
-  following lines to the file `build_<machine>/conf/local.conf`::
-
-   SJA1110_UC_FW = "<path to the local GoldVIP binaries directory>/sja1110_uc.bin"
-   SJA1110_SWITCH_FW = "<path to the local GoldVIP binaries directory>/sja1110_switch.bin"
-
-Note: From the features added above with `DISTRO_FEATURES_append` XEN and PFE are mandatory,
-the rest are optional and the GoldVIP image can be built without those functionalities.
+   SJA1110_UC_FW = ""
+   SJA1110_SWITCH_FW = ""
 
 Note: To use internal development GoldVIP repository add the following line in
 `build_<machine>/conf/local.conf`::
