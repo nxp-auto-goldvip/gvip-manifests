@@ -3,7 +3,7 @@ OpenEmbedded/Yocto project for GoldVIP
 ======================================
 
 GoldVIP project manifest files are used together with GoldVIP Yocto meta layer to
-build the NXP Gold Vehicle Integration Platform (GoldVIP).
+build the NXP S32G Vehicle Integration Platform (GoldVIP).
 
 First Time Setup
 ================
@@ -75,7 +75,7 @@ Setup the build environment
 
   Currently, the only supported `<machine>` (NXP board) is: `s32g274ardb2`.
 
-  PFE firmware, XEN hypervisor and bridging utilities are mandatory and
+  PFE firmware, Xen hypervisor and bridging utilities are mandatory and
   configured by the fsl-goldvip distro.
 
   fsl-goldvip distro includes optional features such as GoldVIP CAN Gateway,
