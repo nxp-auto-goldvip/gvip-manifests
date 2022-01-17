@@ -5,6 +5,6 @@
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/gvip" name="gvip-bitbucket"/>
 
   <remove-project name="goldvip/meta-gvip"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="0a20742665781eb3fe2b6511aad733ce88eb2733"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="aeee20e302437cb95151eeaabaf5ff71cb27a8b0"/>
 
   </manifest>

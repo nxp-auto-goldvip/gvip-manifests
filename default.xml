@@ -9,6 +9,6 @@
   <project name="poky" path="sources/poky" remote="yocto" revision="264a1c06d4b3235ffdbd08508ac5569686448ffc"/>
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="6e84638d77ac921aac46649095bca5ddbde94d2a" upstream="gatesgarth"/>
-  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="938ce3d5ee305e7f35672b6dedeaf818cbd9e7bf" upstream="gatesgarth"/>
-  <project name="goldvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="0a20742665781eb3fe2b6511aad733ce88eb2733" upstream="develop"/>
+  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="f7bd3fcaaccb4f36be339d6d8450ddda7f97a2d1" upstream="gatesgarth"/>
+  <project name="goldvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="aeee20e302437cb95151eeaabaf5ff71cb27a8b0" upstream="develop"/>
   </manifest>
