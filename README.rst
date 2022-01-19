@@ -33,7 +33,7 @@ Building GoldVIP
 The following steps will build a GoldVIP image based on NXP Auto Linux BSP image.
 
 Note:
-A Yocto build needs at least 50GB of free space and takes a lot of time (a few 
+A Yocto build needs at least 50 GB of free space and takes a lot of time (a few 
 hours, depending on the system configuration). It is recommended to use a 
 powerful system with many cores and a fast storage media (e.g., SSD).
 The recommended RAM size is 8 GB.
