@@ -95,7 +95,7 @@ Setup the build environment
 Note: To remove GoldVIP CAN Gateway, GoldVIP Real-time Bootloader, and GoldVIP OTA
 applications, append the following lines to the file `build_<machine>/conf/local.conf`::
 
-   DISTRO_FEATURES_remove = "goldvip-can-gw"
+   DISTRO_FEATURES_remove = "goldvip-gateway"
    DISTRO_FEATURES_remove = "goldvip-bootloader"
    DISTRO_FEATURES_remove = "goldvip-ota"
 
