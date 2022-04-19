@@ -10,5 +10,5 @@
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="6e84638d77ac921aac46649095bca5ddbde94d2a" upstream="gatesgarth"/>
   <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="68dbe7c847b1329761d7565e0adaf4f9a62d1ad6" upstream="gatesgarth"/>
-  <project name="goldvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="d3e25d02050bc28f98e35616e9c79b0e723f4077" upstream="develop"/>
+  <project name="goldvip/meta-gvip" path="sources/meta-gvip" remote="alb" revision="b4e86e78dde7f65a3afb349d7c33243302c2ced6" upstream="develop"/>
   </manifest>
