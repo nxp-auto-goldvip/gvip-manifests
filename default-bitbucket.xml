@@ -6,6 +6,6 @@
 
   <remove-project name="goldvip/meta-gvip"/>
 
-  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="e0e16deea2719727b2f3d5739aee9767b501f65b"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="a0f58ecf2dba328a7ddcb401c3f93aaad9772cee"/>
 
   </manifest>
