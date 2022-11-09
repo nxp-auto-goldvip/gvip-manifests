@@ -4,8 +4,8 @@
 
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/gvip" name="gvip-bitbucket"/>
 
+  <!-- Change the remote used to fetch the GoldVIP sources. -->
   <remove-project name="meta-gvip"/>
-
-  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="f52fc82fdf890698206a073a0a88d6e36c739069"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="e6668c1a6a1d0071cfba558a316f06d1ff29f7f4"/>
 
   </manifest>
