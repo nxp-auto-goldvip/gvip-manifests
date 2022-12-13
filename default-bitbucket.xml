@@ -6,6 +6,6 @@
 
   <!-- Change the remote used to fetch the GoldVIP sources. -->
   <remove-project name="meta-gvip"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="ae6467dbf28a7ff0a9f03773a7bb14bcd3579cba"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="b23e7aca5f7950e92d2f1f6c8b0265b5135b6666"/>
 
   </manifest>
