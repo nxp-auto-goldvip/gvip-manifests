@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
-  <remote fetch="https://source.codeaurora.org/external/autobsps32" name="alb"/>
+  <remote fetch="https://github.com/nxp-auto-linux" name="alb"/>
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://git.openembedded.org" name="oe"/>
   <remote fetch="https://git.linaro.org/openembedded" name="linaro"/>
 
-  <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
+  <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
-  <default sync-j="2" revision="594f3e8aa18bcc76b9f494d4462a819a92ba12b7" remote="alb"/>
+  <default sync-j="2" revision="80cfe1f8d78da5bc46d646942047cd5ec13c3e11" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
@@ -23,8 +23,8 @@
   <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="f3f7a5f1a4713f145107bb043e0d14cb3a51c62f"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="6a751048e50c00261d99c2d8d69534f7a8da38a9"/>
 
-
   <!-- projects below are not updated for gatesgarth -->
-  <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="e381f3eb56b75a4f5f54092952cbb30d8ae8cbcf" upstream="dunfell"/>
+  <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="eb3f043a733a8a49345277c974dc0e0bd88e1a6b"/>
 
   </manifest>
+
