@@ -5,11 +5,8 @@
   <remote fetch="https://github.com/aws" name="aws"/>
   <remote fetch="https://github.com/nxp-auto-goldvip" name="goldvip"/>
 
-  <!-- Change the revision for poky to include the support for the new override syntax. -->
-  <remove-project name="poky"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="264a1c06d4b3235ffdbd08508ac5569686448ffc"/>
-
-  <project name="meta-java" path="sources/meta-java" remote="yocto" revision="6e84638d77ac921aac46649095bca5ddbde94d2a" upstream="gatesgarth"/>
-  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="4e679174d9caa847e4516eec4c01cf12d4b9aff0" upstream="gatesgarth"/>
+  <project name="meta-java" path="sources/meta-java" remote="yocto" revision="87dd00a5b17ab020ee3415556a17c4451092c7fd" upstream="kirkstone"/>
+  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="e0e80b6df49a69ba11a362ed9eb911f05b84cd7f" upstream="kirkstone"/>
   <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="290321f260f4df43d280ed243750ec9d0eca10da" upstream="develop"/>
+
   </manifest>
