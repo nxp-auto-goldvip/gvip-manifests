@@ -7,6 +7,6 @@
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="87dd00a5b17ab020ee3415556a17c4451092c7fd" upstream="kirkstone"/>
   <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="e0e80b6df49a69ba11a362ed9eb911f05b84cd7f" upstream="kirkstone"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="290321f260f4df43d280ed243750ec9d0eca10da" upstream="develop"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="85ebaa41309c08b2dda1b3ac91256474ef56d58c" upstream="develop"/>
 
   </manifest>
