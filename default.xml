@@ -6,7 +6,7 @@
   <remote fetch="https://github.com/nxp-auto-goldvip" name="goldvip"/>
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="87dd00a5b17ab020ee3415556a17c4451092c7fd" upstream="kirkstone"/>
-  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="e0e80b6df49a69ba11a362ed9eb911f05b84cd7f" upstream="kirkstone"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="db651ec7992c5d492ed7ea202c22476c301692b4" upstream="develop"/>
+  <project name="meta-aws" path="sources/meta-aws" remote="aws" revision="7c32ab97047e0ac3f5e2c90a8021bf70e02f6d95" upstream="kirkstone"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="1e6a0abcc7f31d401338c3d97f86b9f02b91988d" upstream="develop"/>
 
   </manifest>
