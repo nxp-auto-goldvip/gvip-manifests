@@ -7,19 +7,19 @@
   <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
-  <default sync-j="2" revision="4da3b261a92506a33355f756fe5df969c4242453" remote="alb"/>
+  <default sync-j="2" revision="30c86b353106b545f4c1d0f60969881d1f49a85e" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
 
   <!-- projects below synchronized with default.xml in LFAC -->
-  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="47e0b467d8555e38a996b731977d9eed9ab02051"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="1aa79a0c9b7d6d8af626b2d39a1d518d70d28205"/>
   <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="1a3e42cedbd94ca73be45800d0e902fec35d0f0f"/>
-  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="88327090d26955a678c6f8bd2585aad4d802f6c4"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="402affcc073db39f782c1ebfd718edd5f11eed4c"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="755632c2fcab43aa05cdcfa529727064b045073c"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="cb2bc17e96552cdfc141d27bd9f4dbd95a872846"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="8bb16533532b6abc2eded7d9961ab2a108fd7a5b"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="6d1a878bbf24c66f7186b270f823fcdf82e35383"/>
 
   <!-- projects below are not updated for gatesgarth -->
   <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="afaef5e29b0d5cb8a0f59c62bf9cbd44140b041e"/>
