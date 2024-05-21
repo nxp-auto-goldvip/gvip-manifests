@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-  <manifest>
-  <include name="default.xml" />
+<manifest>
+  <include name="alb-bitbucket.xml"/>
+  <include name="common.xml"/>
 
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/gvip" name="gvip-bitbucket"/>
-
-  <!-- Change the remote used to fetch the GoldVIP sources. -->
-  <remove-project name="meta-gvip"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="gvip-bitbucket" revision="75fd860a15757529ff3774dc21fed3c121e466b1"/>
-
-  </manifest>
+  <extend-project name="meta-gvip" remote="gvip-bitbucket"/>
+</manifest>
