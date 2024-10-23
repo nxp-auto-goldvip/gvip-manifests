@@ -4,6 +4,9 @@
   <include name="common.xml"/>
 
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/gvip" name="gvip-bitbucket" />
+  <remote fetch="ssh://git@bitbucket.sw.nxp.com/cvip" name="cvip-bitbucket" />
+
   <extend-project name="meta-gvip" remote="gvip-bitbucket"/>
+  <extend-project name="meta-vip" remote="cvip-bitbucket"/>
   <project name="meta-gvip-dev" path="sources/meta-gvip-dev" remote="gvip-bitbucket" revision="bd06335a68177f57ae9146f5be7a0e4fa39c9e57"/>
 </manifest>
