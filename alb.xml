@@ -7,19 +7,19 @@
   <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
-  <default sync-j="2" revision="d2e4349255fad0b3cc3e13f06a2e4e3c3a3c4611" remote="alb"/>
+  <default sync-j="2" revision="7337b5728fa6d430a552cd8f25aebe7952409302" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
 
   <!-- projects below synchronized with default.xml in LFAC -->
-  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="fb17bfb8edcc9560bc1beb966a68f1f4c08ecfb3"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="c525e0c19bdc46d45f71873b5f286f49abb69418"/>
   <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="353078bc06c8b471736daab6ed193e30d533d1f1"/>
-  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="8b356b91ed0d4bcab72350a2ddcef880f4fa5c26"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="0560b848996a0feb410a8cd8ca07c60fe2f3b5bc"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="31751bba1c789f15f574773a659b8017d7bcf440"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="e0cd09e3b8367e2745a27db2e7ff1f8452c8cf41"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dd3d2293ffdf2559f8a433f241765a8ab50cd085"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="4cdc553814640851cce85f84ee9c0b58646cd33b"/>
 
   <!-- projects below are not updated for gatesgarth -->
   <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="f1b87b247b1dbd9392e421b82ece1d91408fef8b"/>
