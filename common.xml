@@ -7,5 +7,5 @@
   <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="32bfc71dd09f1765b311cf7a741c5b4d82f1c33e">
       <copyfile dest="alb-user-extra-layers.sh"    src="alb-user-extra-layers.sh"/>
   </project>
-  <project name="meta-vip" path="sources/meta-vip" remote="goldvip" revision="d076ebba396d95d27b304cacfa8cf1a64f256321"/>
+  <project name="meta-vip" path="sources/meta-vip" remote="goldvip" revision="a508efd310d4e2c872cef0d9a93a30e373328a89"/>
 </manifest>
