@@ -4,8 +4,8 @@
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="2926885ebb4c3780789918e0d2ce5ee42cf115a5" upstream="kirkstone"/>
   <project name="meta-aws" path="sources/meta-aws" remote="yocto" revision="55c123ea9383b5e1e91e8d12907bf5e8dad86b41" upstream="kirkstone"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="32bfc71dd09f1765b311cf7a741c5b4d82f1c33e">
-      <copyfile dest="alb-user-extra-layers.sh"    src="alb-user-extra-layers.sh"/>
+  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="665027bf31f62719054be76a505230799468ac0d">
+      <copyfile dest="alb-user-extra-layers.sh" src="alb-user-extra-layers.sh"/>
   </project>
   <project name="meta-vip" path="sources/meta-vip" remote="goldvip" revision="97f45e0b26900700df2ccf9443b304f1b1c7bd7e"/>
 </manifest>
