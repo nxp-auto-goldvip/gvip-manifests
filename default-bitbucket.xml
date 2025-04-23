@@ -8,5 +8,5 @@
 
   <extend-project name="meta-gvip" remote="gvip-bitbucket"/>
   <extend-project name="meta-vip" remote="cvip-bitbucket"/>
-  <project name="meta-gvip-dev" path="sources/meta-gvip-dev" remote="gvip-bitbucket" revision="bd06335a68177f57ae9146f5be7a0e4fa39c9e57"/>
+  <project name="meta-gvip-dev" path="sources/meta-gvip-dev" remote="gvip-bitbucket" revision="bce88ff5886577d9e5626f513f2073d14152ee4d"/>
 </manifest>
