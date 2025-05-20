@@ -4,7 +4,7 @@
 
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="09d27e00bc2899351cc7cca3fab5305a4c8983bf" upstream="scarthgap"/>
   <project name="meta-aws" path="sources/meta-aws" remote="yocto" revision="d82f0cdbda398d3fbab92318ced32c37b6c1d0d4" upstream="scarthgap"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="b16ce777b9aa1fd45f394a89ad2a32b0031756e1">
+  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="95da4844439531e45341a3d91e23eabe7e561599">
       <copyfile dest="alb-user-extra-layers.sh" src="alb-user-extra-layers.sh"/>
   </project>
   <project name="meta-vip" path="sources/meta-vip" remote="goldvip" revision="9726f657a22e3f1215c346393fea0f58ad310426"/>
