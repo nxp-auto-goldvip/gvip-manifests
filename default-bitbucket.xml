@@ -6,7 +6,8 @@
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/gvip" name="gvip-bitbucket" />
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/cvip" name="cvip-bitbucket" />
 
-  <extend-project name="meta-gvip" remote="gvip-bitbucket" revision="aaece993888c3a26d2ab393803da8bf3bd28de06"/>
-  <extend-project name="meta-vip" remote="cvip-bitbucket" revision="67fd1c02806ecb4f635c2b0f37cfd2ad8a08c49c"/>
+  <extend-project name="meta-gvip" remote="gvip-bitbucket"/>
+  <extend-project name="meta-vip" remote="cvip-bitbucket"/>
+
   <project name="meta-gvip-dev" path="sources/meta-gvip-dev" remote="gvip-bitbucket" revision="d5a9d7abbfde2d90e57f32d4b1ab951d16c3c5ac"/>
 </manifest>
