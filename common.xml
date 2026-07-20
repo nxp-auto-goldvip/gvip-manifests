@@ -3,8 +3,8 @@
   <remote fetch="https://github.com/nxp-auto-goldvip" name="goldvip"/>
 
   <project name="meta-aws" path="sources/meta-aws" remote="yocto" revision="d82f0cdbda398d3fbab92318ced32c37b6c1d0d4" upstream="scarthgap"/>
-  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="95295a27663ff4a355fb2e6809deb02053a6d446">
+  <project name="meta-gvip" path="sources/meta-gvip" remote="goldvip" revision="d800baa0345488ea0840e62a71d322e2d5437a93">
       <copyfile dest="alb-user-extra-layers.sh" src="alb-user-extra-layers.sh"/>
   </project>
-  <project name="meta-vip" path="sources/meta-vip" remote="goldvip" revision="0267360bd1455ebee7b51bb0b00fd20a8ce20cbf"/>
+  <project name="meta-vip" path="sources/meta-vip" remote="goldvip" revision="43a75d15e3d224775a377f19dad8d0e23de9c853"/>
 </manifest>
